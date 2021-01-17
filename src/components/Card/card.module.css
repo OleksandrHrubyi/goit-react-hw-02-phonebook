@@ -1,0 +1,39 @@
+.name {
+  margin-right: 20px;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.number {
+  color: white;
+  font-size: 23px;
+  margin-right: 20px;
+}
+
+.item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+
+.btn {
+  margin-left: auto;
+  padding: 10px 20px;
+
+  border-radius: 10px;
+  background: rgba(219, 12, 12, 0.801);
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  border: transparent;
+  outline: none;
+}
+
+.btn:hover {
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.68);
+  transform: scale(1.05);
+}
