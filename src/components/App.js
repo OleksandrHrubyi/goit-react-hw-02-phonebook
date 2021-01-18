@@ -1,14 +1,18 @@
 import React, {Component} from 'react';
-import PhonebookForm from '../Form/Form';
-import Card from '../Card/Card';
-import Filter from '../Filter/Filter';
-import styles from '../Phonebook/phonebook.module.css';
+import PhonebookForm from './PhonebookForm/PhonebookForm';
+import ContactList from './ContactList/ContactList';
+import Filter from './Filter/Filter';
+import Container from './Container/Container';
+
+
+
+
 
 const { v4: uuidv4 } = require('uuid');
 
 
 
-class Phonebook extends Component {
+class App extends Component {
     state = {
         contacts: [],
         filter: ''
@@ -62,21 +66,21 @@ class Phonebook extends Component {
     
     render () {
         const filterContact = this.filterContact();
-        return <>
-        <h1 className ={styles.title}>Phonebook</h1>
+        return  <Container>
+        <h1>Phonebook</h1>
         <PhonebookForm onSubmit ={this.handlerFormSubmit}/>
         
         {this.state.contacts.length > 0? 
-          <div>
-              <h2 className ={styles.title}>Contacts</h2>
+          <>
+              <h2 >Contacts</h2>
               <Filter value ={this.state.filter} onChange ={this.handleFilter}/>
-              <Card arr ={filterContact} onDel ={this.handleDeliteContact}/>
+              <ContactList arr ={filterContact} onDel ={this.handleDeliteContact}/>
               
-          </div> : '' }
+          </> : '' }
        
-        </>
+          </Container>
         }
 }
 
 
-export default Phonebook;
+export default App;

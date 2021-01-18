@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import styles from '../Card/card.module.css';
+import styles from '../ContactList/contactList.module.css';
 
 
 
